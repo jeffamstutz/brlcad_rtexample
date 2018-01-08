@@ -34,7 +34,7 @@ find_package(brlcad REQUIRED)
 
 ## Build 'rtexample' ##
 
-add_executable(rtexample rtexample.c)
+add_executable(rtexample rtexample.cpp)
 
 target_include_directories(rtexample PRIVATE ${BRLCAD_INCLUDE_DIRS})
 target_link_libraries(rtexample ${BRLCAD_LIBRARIES})
