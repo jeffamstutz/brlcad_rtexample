@@ -30,11 +30,11 @@ project(brlcad_rt_example)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}")
 
-find_package(brlcad)
+find_package(brlcad REQUIRED)
 
 ## Build 'rtexample' ##
 
 add_executable(rtexample rtexample.c)
 
-target_include_directories(rtexample PRIVATE ${BRLCAD_INCLUDE_DIR})
+target_include_directories(rtexample PRIVATE ${BRLCAD_INCLUDE_DIRS})
 target_link_libraries(rtexample ${BRLCAD_LIBRARIES})
